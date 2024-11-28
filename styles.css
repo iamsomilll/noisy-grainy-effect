@@ -1,0 +1,74 @@
+/* styles.css */
+body {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  background: linear-gradient(to bottom, #87CEEB, #4682B4);
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+h1 {
+  margin: 20px 0;
+  font-size: 2rem;
+}
+
+#game-area {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  margin: 0 auto;
+  background: #34495e;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+#game-area::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  background: white;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: lane-marking 1.5s linear infinite;
+}
+
+@keyframes lane-marking {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 100%;
+  }
+}
+
+#player-car {
+  position: absolute;
+  bottom: 10px;
+  left: 175px;
+  width: 50px;
+  height: auto;
+}
+
+#player-car img {
+  width: 100%;
+  height: auto;
+}
+
+.obstacle {
+  position: absolute;
+  width: 50px;
+  height: auto;
+}
+
+.obstacle img {
+  width: 100%;
+  height: auto;
+}
+
+#score {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
